@@ -23,6 +23,8 @@ export default {
     autofilter: 'Filter',
     formula: 'Functions',
     more: 'More',
+    export: 'Export Excel',
+    Exit: 'Exit'
   },
   contextmenu: {
     copy: 'Copy',

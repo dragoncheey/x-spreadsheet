@@ -186,7 +186,7 @@ declare module 'x-data-spreadsheet' {
      * @param lang
      * @param message
      */
-    locale(lang: string, message: string): void;
+    static locale(lang: string, message: string): void;
   }
   global {
     interface Window {

@@ -23,6 +23,8 @@ export default {
     autofilter: '自动筛选',
     formula: '函数',
     more: '更多',
+    export: '导出Excel',
+    exit: '返回'
   },
   contextmenu: {
     copy: '复制',

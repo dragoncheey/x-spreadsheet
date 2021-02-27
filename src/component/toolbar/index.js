@@ -27,6 +27,8 @@ import More from './more';
 import { h } from '../element';
 import { cssPrefix } from '../../config';
 import { bind } from '../event';
+import Exit from './exit';
+import Export from './export';
 
 function buildDivider() {
   return h('div', `${cssPrefix}-toolbar-divider`);
@@ -54,7 +56,7 @@ function moreResize() {
     el, btns, moreEl, btns2,
   } = this;
   const { moreBtns, contentEl } = moreEl.dd;
-  el.css('width', `${this.widthFn() - 60}px`);
+  el.css('width', `${this.widthFn()}px`);
   const elBox = el.box();
 
   let sumWidth = 160;
@@ -88,6 +90,11 @@ export default class Toolbar {
     this.isHide = isHide;
     const style = data.defaultStyle();
     this.items = [
+      [
+        this.exitEl = new Exit(),
+        this.exportEl = new Export(),
+      ],
+      buildDivider(),
       [
         this.undoEl = new Undo(),
         this.redoEl = new Redo(),
@@ -129,7 +136,7 @@ export default class Toolbar {
         this.freezeEl = new Freeze(),
         this.autofilterEl = new Autofilter(),
         this.formulaEl = new Formula(),
-        this.moreEl = new More(),
+        this.moreEl = new More()
       ],
     ];
 

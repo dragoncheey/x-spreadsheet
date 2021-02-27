@@ -28,7 +28,7 @@ class Spreadsheet {
     }, (index, value) => {
       this.datas[index].name = value;
     });
-    this.data = this.addSheet();
+    this.data = this.addSheet('', true, true);
     const rootEl = h('div', `${cssPrefix}`)
       .on('contextmenu', evt => evt.preventDefault());
     // create canvas element
@@ -37,7 +37,7 @@ class Spreadsheet {
     rootEl.child(this.bottombar.el);
   }
 
-  addSheet(name, active = true) {
+  addSheet(name, active = true, init = false) {
     const n = name || `sheet${this.sheetIndex}`;
     const d = new DataProxy(n, this.options);
     d.change = (...args) => {
@@ -46,7 +46,8 @@ class Spreadsheet {
     this.datas.push(d);
     // console.log('d:', n, d, this.datas);
     this.bottombar.addItem(n, active);
-    this.sheetIndex += 1;
+    if( !init )
+      this.sheetIndex += 1;
     return d;
   }
 

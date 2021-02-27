@@ -531,6 +531,10 @@ function toolbarChange(type, value) {
     this.redo();
   } else if (type === 'print') {
     this.print.preview();
+  } else if (type === 'export') {
+		window['x-spreadsheet-emitter'].emit('spreadsheet-export-event');
+  } else if (type === 'exit') {
+		window['x-spreadsheet-emitter'].emit('spreadsheet-exit-event');
   } else if (type === 'paintformat') {
     if (value === true) copy.call(this);
     else clearClipboard.call(this);

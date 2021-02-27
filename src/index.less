@@ -117,7 +117,7 @@ body {
     border-collapse: separate;
     border-spacing: 2;
     background: #fff;
-
+    
     td {
       margin: 0;
       cursor: pointer;
@@ -382,7 +382,7 @@ body {
     line-height: 0;
     z-index: 100;
     pointer-events: auto;
-
+  
     textarea {
       box-sizing: content-box;
       border: none;
@@ -398,7 +398,7 @@ body {
       line-height: 22px;
       margin: 0;
     }
-
+  
     .textline {
       overflow: hidden;
       visibility: hidden;
@@ -433,7 +433,7 @@ body {
   }
 
   // &.active {
-    ////   background: #89aef53d;
+  ////   background: #89aef53d;
   // }
 
   &.divider {
@@ -452,7 +452,7 @@ body {
 }
 
 .x-spreadsheet-item,
-.x-spreadsheet-header,
+.x-spreadsheet-header
 {
 
   &.state {
@@ -494,22 +494,22 @@ body {
 }
 
 .@{css-prefix}-checkbox {
-  position: relative;
-  display: inline-block;
-  backface-visibility: hidden;
-  outline: 0;
-  vertical-align: baseline;
-  font-style: normal;
-  font-size: 1rem;
-  line-height: 1em;
-  > input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0!important;
+    position: relative;
+    display: inline-block;
+    backface-visibility: hidden;
     outline: 0;
-    z-index: -1;
-  }
+    vertical-align: baseline;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1em;
+    > input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0!important;
+      outline: 0;
+      z-index: -1;
+    }
 }
 
 .@{css-prefix}-suggest,
@@ -567,7 +567,7 @@ body {
 .@{css-prefix}-bottombar {
   position: relative;
   border-top: 1px solid #e0e2e4;
-
+  
   .@{css-prefix}-menu > li {
     line-height: 40px;
     height: 40px;
@@ -731,7 +731,7 @@ body {
   color: rgba(0,0,0,.65);
   background: #ffffff;
   user-select: none;
-
+  
   .calendar-header {
     font-weight: 700;
     line-height: 30px;
@@ -747,7 +747,7 @@ body {
 
     .calendar-header-right {
       float: right;
-
+      
       a {
         padding: 3px 0;
         margin-right: 2px;
@@ -758,11 +758,11 @@ body {
       }
     }
   }
-
+  
   .calendar-body {
     border-collapse: collapse;
     border-spacing: 0;
-
+    
     th, td {
       width: 100%/7;
       min-width: 32px;
@@ -771,19 +771,19 @@ body {
       line-height: 30px;
       padding: 0;
     }
-
+    
     td > .cell {
       // border: 1px solid rgba(0,0,0,.05);
-
+      
       &:hover {
         background: #ecf6fd;
       }
-
+      
       &.active, &.active:hover {
         background: #ecf6fd;
         color: #2185D0;
       }
-
+      
       &.disabled {
         pointer-events: none;
         opacity: 0.5;
@@ -793,12 +793,12 @@ body {
 }
 
 .@{css-prefix}-datepicker {
-  box-shadow: 2px 2px 5px rgba(0,0,0,.2);
-  position: absolute;
-  left: 0;
-  top: calc(100% + 5px);
-  z-index: 10;
-  width: auto;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+    position: absolute;
+    left: 0;
+    top: calc(100% + 5px);
+    z-index: 10;
+    width: auto;
 }
 
 .@{css-prefix}-buttons {
@@ -849,7 +849,7 @@ body {
   font-weight: 400;
   display: inline-flex;
   color: rgba(0,0,0,.87);
-
+  
   input {
     z-index: 1;
     margin: 0;
@@ -1008,7 +1008,7 @@ form fieldset {
     right: .8em;
     top: .65em;
     border-radius: 18px;
-
+    
     &:hover {
       opacity: 1;
       background: rgba(0, 0, 0, 0.08);
@@ -1034,9 +1034,9 @@ form fieldset {
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .@{css-prefix}-toolbar {
-    display: none;
-  }
+  // .@{css-prefix}-toolbar {
+  //   display: none;
+  // }
 }
 
 .@{css-prefix}-icon {
@@ -1221,6 +1221,10 @@ form fieldset {
       left: -13 * @icon-size;
       top: -2 * @icon-size;
     }
+    &.exit {
+      left: -6 * @icon-size;
+      top: -3 * @icon-size;
+    }
     &.chevron-down {
       left: 0;
       top: -3 * @icon-size;
@@ -1235,6 +1239,10 @@ form fieldset {
     }
     &.chevron-right {
       left: -3 * @icon-size;
+      top: -3 * @icon-size;
+    }
+    &.export {
+      left: -7 * @icon-size;
       top: -3 * @icon-size;
     }
   }
